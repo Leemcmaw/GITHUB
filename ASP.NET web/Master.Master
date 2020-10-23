@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="HomePage.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+         
+        
+        <script type="text/javascript" language="javascript">
+       function areyousure() {
+            var reply = confirm("Empty basket contents... Are you sure?");
+            return reply;
+       }
+</script>
+
+        <link rel="Stylesheet" href="masterstyles.css" />
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="navbar">
+                   <!-- <a  href="Cart.aspx"><i class="fa fa-fw fa-shopping-basket"></i>Basket</a> <a href="Login.aspx"><i class="fa fa-fw fa-Login"></i>Login</a>-->
+                    <asp:HyperLink ID="Login" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                    <asp:HyperLink ID="Cart" runat="server" NavigateUrl="~/Cart.aspx">Cart</asp:HyperLink>
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:Image ID="Image1" runat="server" CssClass="auto-style1" Height="107px" ImageUrl="~/Photos/logo.jpg" Width="433px" />
+    <div class="topnav">
+ 
+  
+          <asp:HyperLink ID="Home" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>    
+        <asp:HyperLink ID="Football" runat="server" NavigateUrl="~/Football.aspx">Football</asp:HyperLink>
+        <asp:HyperLink ID="Rugby" runat="server" NavigateUrl="~/Rugby.aspx">Rugby</asp:HyperLink>
+        <asp:HyperLink ID="Contact" runat="server" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink>
+        <asp:HyperLink ID="Blog" runat="server" NavigateUrl="~/Blog.aspx">Blog</asp:HyperLink>
+        <asp:HyperLink ID="Members" runat="server" NavigateUrl="~/Secure/MembersOnly.aspx">Members Only</asp:HyperLink>
+        </div>
+        
+
+    
+    <p>
+        &nbsp;</p>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+           
+      
+  
+   
+           <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">   
+   
+               
+   
+           </asp:ContentPlaceHolder>   
+   
+             
+   
+
+            </asp:ContentPlaceHolder>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+        </form>
+</body>
+
+</html>
